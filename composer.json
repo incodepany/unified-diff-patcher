@@ -1,0 +1,75 @@
+{
+    "name": "vaimo/unified-diff-patcher",
+    "type": "library",
+    "license": "MIT",
+    "description": "Provides executable for applying unified diff files as patches",
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/console": "^2.7 || ^3.0 || ^4.0",
+        "symfony/process": "^2.7 || ^3.0 || ^4.0"
+    },
+    "require-dev": {
+        "phpcompatibility/php-compatibility": "^9.1.1",
+        "squizlabs/php_codesniffer": "^2.9.2",
+        "sebastian/phpcpd": "^1.4.3",
+        "phpmd/phpmd": "^2.6.0",
+        "vaimo/composer-changelogs": "^0.15.1"
+    },
+    "config": {
+        "platform": {
+            "php": "5.3.9"
+        },
+        "process-timeout": 3000
+    },
+    "authors": [
+        {
+            "name": "Francois Mazerolle",
+            "email": "fmaz008@gmail.com"
+        },
+        {
+            "name": "Allan Paiste",
+            "email": "allan.paiste@vaimo.com"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/vaimo/unified-diff-patcher",
+        "docs": "https://github.com/vaimo/unified-diff-patcher",
+        "issues": "https://github.com/vaimo/unified-diff-patcher/issues"
+    },
+    "scripts-descriptions": {
+        "test": "Run tests",
+        "code:test": "Run tests",
+        "code:test!": "Run tests (and purge dependency locks before doing so)",
+        "code:analyse": "Run static code analysis for the source code",
+        "code:normalise": "Apply automatic fixes to the code based on the static code analysis (where applicable)",
+        "code:deps": "Make sure that dependencies have code that will actually work with platform requirements defined"
+    },
+    "scripts": {
+        "code:analyse": "bin/analyse",
+        "code:normalise": "bin/normalise",
+        "post-install-cmd": "bin/bootstrap",
+        "post-update-cmd" : "bin/bootstrap"
+    },
+    "keywords": [
+        "patch",
+        "unified diff",
+        "patch applier"
+    ],
+    "minimum-stability": "stable",
+    "extra": {
+        "changelog": {
+            "source": "changelog.json",
+            "output": {
+                "md": "CHANGELOG.md"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Vaimo\\UnifiedDiffPatcher\\": "src"
+        }
+    },
+    "bin": [
+        "dist/patch"
+    ]
+}
