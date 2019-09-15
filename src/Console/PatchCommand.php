@@ -1,9 +1,7 @@
 <?php
 /**
- * Implementation of the a patch mecanism for unified diff file.
- * This method allow the validation of the whole patch before modifying any file.
- *
- * @author Francois Mazerolle <fmaz008@gmail.com>
+ * Copyright © Vaimo Group. All rights reserved.
+ * See LICENSE_VAIMO.txt for license details.
  */
 namespace Vaimo\UnifiedDiffPatcher\Console;
 

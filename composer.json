@@ -1,7 +1,7 @@
 {
     "name": "vaimo/unified-diff-patcher",
     "type": "library",
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "description": "Provides executable for applying unified diff files as patches",
     "require": {
         "php": ">=5.3.0",
