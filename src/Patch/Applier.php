@@ -4,6 +4,7 @@
  * This method allow the validation of the whole patch before modifying any file.
  *
  * @author Francois Mazerolle <fmaz008@gmail.com>
+ * @modified Incodepany LLC To fix applying git patches without newlines at the end of a command
  */
 namespace Vaimo\UnifiedDiffPatcher\Patch;
 
