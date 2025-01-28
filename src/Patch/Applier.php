@@ -189,6 +189,8 @@ class Applier
                         $hunkSkip = true;
                     }
                 }
+            }  elseif ( strpos( $line, "No newline at end of file" ) !== false ) {
+                // do nothing, skip line
             } else {
                 $this->addError(sprintf('Line #%u of the patch file seems invalid.', $this->patchLine));
             }
